@@ -8,7 +8,7 @@ export default function Navbar() {
     return (
         <header className="bg-white border-b border-orange-100 px-6 md:px-12 py-4">
             <div className="max-w-[1110px] mx-auto flex justify-between items-center">
-                <h2 className="text-xl font-bold text-dark"><span className="text-primary">Sun</span>Cart</h2>
+                <Link href="/"><h2 className="text-xl font-bold text-dark"><span className="text-primary">Sun</span>Cart</h2></Link>
                 <nav>
                     <ul className="flex items-center gap-2 list-none p-0 m-0">
                         <li><Link href="/" className="px-4 py-2 text-sm text-gray-600 hover:text-primary transition-colors">Home</Link></li>
