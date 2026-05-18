@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export function middleware(request) {
-    const session = request.cookies.get("session");
+    const session = request.cookies.get("better-auth.session_token");
     
     if (!session) {
         const loginUrl = new URL("/login", request.url);
