@@ -2,6 +2,13 @@ import { NextResponse } from "next/server";
 
 export function middleware(request) {
     const session = request.cookies.get("better-auth.session_token");
+    console.log("=== Cookie Debug ===");
+    console.log("All cookies:", JSON.stringify(request.cookies.getAll(), null, 2));
+    console.log("Session cookie exists:", !!session);
+    console.log("Session value:", session?.value || "NOT FOUND");
+    console.log("Request URL:", request.url);
+    console.log("Request method:", request.method);
+    console.log("==================");
     
     if (!session) {
         const loginUrl = new URL("/login", request.url);
